@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'dart:convert';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,12 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WebSocketPage(),
+      home: const WebSocketPage(),
     );
   }
 }
 
 class WebSocketPage extends StatefulWidget {
+  const WebSocketPage({super.key});
+
   @override
   _WebSocketPageState createState() => _WebSocketPageState();
 }
@@ -60,7 +64,7 @@ class _WebSocketPageState extends State<WebSocketPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('WebSocket Demo'),
+        title: const Text('WebSocket Demo'),
       ),
       body: Center(
         child: ElevatedButton(
